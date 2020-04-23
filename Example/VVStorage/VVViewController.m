@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSCache *cache = [[NSCache alloc] init];
+    [cache setObject:@"1" forKey:@"A"];
+    if(cache){}
 }
 
 - (void)didReceiveMemoryWarning

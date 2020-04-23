@@ -10,11 +10,10 @@
 #endif
 #endif
 
-#import "MMKV+Dictionariable.h"
 #import "NSMutableDictionary+Dictionariable.h"
 #import "VVDictionariable.h"
-#import "VVOrm+Redisable.h"
 #import "VVRedisable.h"
+#import "VVRedisableCache.h"
 #import "VVRedisStorage.h"
 
 FOUNDATION_EXPORT double VVStorageVersionNumber;

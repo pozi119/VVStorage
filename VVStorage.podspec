@@ -22,22 +22,25 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/pozi119/VVStorage'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'pozi119' => 'pozi119@163.com' }
   s.source           = { :git => 'https://github.com/pozi119/VVStorage.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '10.0'
-
-  s.source_files = 'VVStorage/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'VVStorage' => ['VVStorage/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'VVSequelize'
-  s.dependency 'MMKV'
+  s.default_subspec = 'VVSequelize'
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'VVStorage/Classes/Core/**/*'
+  end
+  
+  s.subspec 'VVSequelize' do |ss|
+    ss.source_files = 'VVStorage/Classes/VVSequelize/**/*'
+    ss.dependency 'VVStorage/Core'
+    ss.dependency 'VVSequelize'
+  end
+  
+  s.subspec 'MMKV' do |ss|
+    ss.source_files = 'VVStorage/Classes/MMKV/**/*'
+    ss.dependency 'VVStorage/Core'
+    ss.dependency 'MMKV'
+  end
 end
