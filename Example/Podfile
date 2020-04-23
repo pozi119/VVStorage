@@ -5,7 +5,6 @@ platform :ios, '10.0'
 target 'VVStorage_Example' do
   pod 'VVStorage', :path => '../'
   pod 'VVSequelize', :path => '../../VVSequelize'
-  pod 'MMKV'
 
   target 'VVStorage_Tests' do
     inherit! :search_paths
