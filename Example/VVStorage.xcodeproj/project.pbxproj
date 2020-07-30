@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FA0228F701B1B1969820E8A /* Pods_VVStorage_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DB48C4CC9560E4D3111EDA /* Pods_VVStorage_Example.framework */; };
 		3EE8AD8423B44C62000F84D3 /* VVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE8AD7423B44A6F000F84D3 /* VVUser.m */; };
-		45F81B3CDB80B857185A53C7 /* Pods_VVStorage_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7520A267E26E047FA06B0BDB /* Pods_VVStorage_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,7 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		D5BC79AA7266FD928DCA56CF /* Pods_VVStorage_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC51A44A2FACFD68A8E96DA6 /* Pods_VVStorage_Example.framework */; };
+		D25D853889F8CC1377ACD316 /* Pods_VVStorage_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712405DCDEF42F6265D89AE3 /* Pods_VVStorage_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05B90F77063D21CA89ED98FE /* Pods-VVStorage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVStorage_Tests.debug.xcconfig"; path = "Target Support Files/Pods-VVStorage_Tests/Pods-VVStorage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		30BC3C4F8C790C64B67C1DFF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3EE8AD7323B44A6F000F84D3 /* VVUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VVUser.h; sourceTree = "<group>"; };
 		3EE8AD7423B44A6F000F84D3 /* VVUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVUser.m; sourceTree = "<group>"; };
+		5A1714C42B1A5F7BF927C0D9 /* Pods-VVStorage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVStorage_Tests.release.xcconfig"; path = "Target Support Files/Pods-VVStorage_Tests/Pods-VVStorage_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* VVStorage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VVStorage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,15 +61,15 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		712405DCDEF42F6265D89AE3 /* Pods_VVStorage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VVStorage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7520A267E26E047FA06B0BDB /* Pods_VVStorage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VVStorage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8BA72A718A30478DA0E6B495 /* Pods-VVStorage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVStorage_Example.debug.xcconfig"; path = "Target Support Files/Pods-VVStorage_Example/Pods-VVStorage_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9C425AF019CF683375AA0C8C /* Pods-VVStorage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVStorage_Tests.debug.xcconfig"; path = "Target Support Files/Pods-VVStorage_Tests/Pods-VVStorage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A099056EFAFC052C07D05585 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A9237AD214F13F1903CBD3B2 /* Pods-VVStorage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVStorage_Example.release.xcconfig"; path = "Target Support Files/Pods-VVStorage_Example/Pods-VVStorage_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B0F4BC9295E661405E8AE88D /* Pods-VVStorage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVStorage_Example.debug.xcconfig"; path = "Target Support Files/Pods-VVStorage_Example/Pods-VVStorage_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B56AD1115FDEC6422BE598A9 /* VVStorage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VVStorage.podspec; path = ../VVStorage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BC51A44A2FACFD68A8E96DA6 /* Pods_VVStorage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VVStorage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1AE65FB72BF5E33324A3FB3 /* Pods-VVStorage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVStorage_Tests.release.xcconfig"; path = "Target Support Files/Pods-VVStorage_Tests/Pods-VVStorage_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C2DB48C4CC9560E4D3111EDA /* Pods_VVStorage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VVStorage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D684FDEBC1FE6B0BB7563DB4 /* Pods-VVStorage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVStorage_Example.release.xcconfig"; path = "Target Support Files/Pods-VVStorage_Example/Pods-VVStorage_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				D5BC79AA7266FD928DCA56CF /* Pods_VVStorage_Example.framework in Frameworks */,
+				2FA0228F701B1B1969820E8A /* Pods_VVStorage_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				45F81B3CDB80B857185A53C7 /* Pods_VVStorage_Tests.framework in Frameworks */,
+				D25D853889F8CC1377ACD316 /* Pods_VVStorage_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +135,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				BC51A44A2FACFD68A8E96DA6 /* Pods_VVStorage_Example.framework */,
-				7520A267E26E047FA06B0BDB /* Pods_VVStorage_Tests.framework */,
+				C2DB48C4CC9560E4D3111EDA /* Pods_VVStorage_Example.framework */,
+				712405DCDEF42F6265D89AE3 /* Pods_VVStorage_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,10 +201,10 @@
 		76943808F4E1CF915C5B9704 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8BA72A718A30478DA0E6B495 /* Pods-VVStorage_Example.debug.xcconfig */,
-				A9237AD214F13F1903CBD3B2 /* Pods-VVStorage_Example.release.xcconfig */,
-				05B90F77063D21CA89ED98FE /* Pods-VVStorage_Tests.debug.xcconfig */,
-				C1AE65FB72BF5E33324A3FB3 /* Pods-VVStorage_Tests.release.xcconfig */,
+				B0F4BC9295E661405E8AE88D /* Pods-VVStorage_Example.debug.xcconfig */,
+				D684FDEBC1FE6B0BB7563DB4 /* Pods-VVStorage_Example.release.xcconfig */,
+				9C425AF019CF683375AA0C8C /* Pods-VVStorage_Tests.debug.xcconfig */,
+				5A1714C42B1A5F7BF927C0D9 /* Pods-VVStorage_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -216,11 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "VVStorage_Example" */;
 			buildPhases = (
-				BFA2D2ADB98935C181351485 /* [CP] Check Pods Manifest.lock */,
+				CAB5946175E4B1CD68761DB7 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				46608306D116415964764C1F /* [CP] Embed Pods Frameworks */,
+				43D6DEFB9B7DB611B3573ECC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,7 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "VVStorage_Tests" */;
 			buildPhases = (
-				A40C58C92E4BFEC6735E7AF4 /* [CP] Check Pods Manifest.lock */,
+				DCECC59D16D3B5C3D15A8F1B /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
@@ -307,7 +307,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46608306D116415964764C1F /* [CP] Embed Pods Frameworks */ = {
+		43D6DEFB9B7DB611B3573ECC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,29 +329,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VVStorage_Example/Pods-VVStorage_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A40C58C92E4BFEC6735E7AF4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VVStorage_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFA2D2ADB98935C181351485 /* [CP] Check Pods Manifest.lock */ = {
+		CAB5946175E4B1CD68761DB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,6 +345,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-VVStorage_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCECC59D16D3B5C3D15A8F1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VVStorage_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -536,7 +536,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BA72A718A30478DA0E6B495 /* Pods-VVStorage_Example.debug.xcconfig */;
+			baseConfigurationReference = B0F4BC9295E661405E8AE88D /* Pods-VVStorage_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -552,7 +552,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9237AD214F13F1903CBD3B2 /* Pods-VVStorage_Example.release.xcconfig */;
+			baseConfigurationReference = D684FDEBC1FE6B0BB7563DB4 /* Pods-VVStorage_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -568,7 +568,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05B90F77063D21CA89ED98FE /* Pods-VVStorage_Tests.debug.xcconfig */;
+			baseConfigurationReference = 9C425AF019CF683375AA0C8C /* Pods-VVStorage_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -593,7 +593,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1AE65FB72BF5E33324A3FB3 /* Pods-VVStorage_Tests.release.xcconfig */;
+			baseConfigurationReference = 5A1714C42B1A5F7BF927C0D9 /* Pods-VVStorage_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

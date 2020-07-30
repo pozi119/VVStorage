@@ -28,6 +28,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
   
   s.default_subspec = 'VVSequelize'
+  
   s.subspec 'Core' do |ss|
     ss.source_files = 'VVStorage/Classes/Core/**/*'
   end
@@ -36,6 +37,7 @@ TODO: Add long description of the pod here.
     ss.source_files = 'VVStorage/Classes/VVSequelize/**/*'
     ss.dependency 'VVStorage/Core'
     ss.dependency 'VVSequelize'
+    ss.xcconfig = { 'OTHER_CFLAGS' => '-DVVSEQUELIZE_CORE' }
   end
   
   s.subspec 'MMKV' do |ss|
