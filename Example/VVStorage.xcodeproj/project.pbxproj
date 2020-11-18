@@ -314,12 +314,16 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VVStorage_Example/Pods-VVStorage_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework",
+				"${BUILT_PRODUCTS_DIR}/MMKVCore/MMKVCore.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
 				"${BUILT_PRODUCTS_DIR}/VVSequelize/VVSequelize.framework",
 				"${BUILT_PRODUCTS_DIR}/VVStorage/VVStorage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMKV.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMKVCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VVSequelize.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VVStorage.framework",

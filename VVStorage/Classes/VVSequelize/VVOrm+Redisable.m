@@ -8,16 +8,14 @@
 #import <Foundation/Foundation.h>
 #import "VVOrm+Redisable.h"
 
-static const char *__vt_uniqueKey = "__vt_uniqueKey";
-
 @interface VVOrm ()
-@property (nonatomic, copy, readonly) NSString *vt_uniqueKey;
+@property (nonatomic, copy, readonly) NSString *uniqueKey;
 @end
 
 @implementation VVOrm (Redisable)
 
-- (NSString *)vt_uniqueKey {
-    NSString *key = objc_getAssociatedObject(self, __vt_uniqueKey);
+- (NSString *)uniqueKey {
+    NSString *key = self.associate.uniqueKey;
     if (!key) {
         if (self.config.primaries.count == 1) {
             key = self.config.primaries.firstObject;
@@ -26,20 +24,20 @@ static const char *__vt_uniqueKey = "__vt_uniqueKey";
         } else {
             NSAssert(NO, @"Invalid Orm");
         }
-        objc_setAssociatedObject(self, __vt_uniqueKey, key, OBJC_ASSOCIATION_COPY);
+        self.associate.uniqueKey = key;
     }
     return key;
 }
 
-- (VTKey)vt_keyForObject:(id)object
+- (VTKey)uniqueKeyForObject:(id)object
 {
-    return [object valueForKey:self.vt_uniqueKey];
+    return [object valueForKey:self.uniqueKey];
 }
 
 // MARK: set
 - (NSInteger)set:(VTValue)anObject forKey:(VTKey)aKey
 {
-    VTKey key = [self vt_keyForObject:anObject];
+    VTKey key = [self uniqueKeyForObject:anObject];
     if (![key isEqual:aKey]) return -1;
     NSDictionary *condition = [self uniqueConditionForObject:anObject];
     VTValue value = [self findOne:condition];
@@ -71,14 +69,14 @@ static const char *__vt_uniqueKey = "__vt_uniqueKey";
 // MARK: get
 - (nullable VTValue)get:(VTKey)aKey
 {
-    return [self findOne:self.vt_uniqueKey.eq(aKey)];
+    return [self findOne:self.uniqueKey.eq(aKey)];
 }
 
 - (NSDictionary<VTKey, VTValue> *)multiGet:(NSArray<VTKey> *)keys
 {
     NSMutableDictionary<VTKey, VTValue> *results = [NSMutableDictionary dictionary];
     for (VTKey aKey in keys) {
-        VTValue value = [self findOne:self.vt_uniqueKey.eq(aKey)];
+        VTValue value = [self findOne:self.uniqueKey.eq(aKey)];
         results[aKey] = value;
     }
     return results;
@@ -86,13 +84,13 @@ static const char *__vt_uniqueKey = "__vt_uniqueKey";
 
 - (BOOL)exists:(VTKey)aKey
 {
-    return [self count:self.vt_uniqueKey.eq(aKey)] > 0;
+    return [self count:self.uniqueKey.eq(aKey)] > 0;
 }
 
 // MARK: del
 - (nullable VTValue)del:(VTKey)aKey
 {
-    VVExpr *condition = self.vt_uniqueKey.eq(aKey);
+    VVExpr *condition = self.uniqueKey.eq(aKey);
     VTValue value = [self findOne:condition];
     BOOL ret = [self deleteWhere:condition];
     return ret ? value : nil;
@@ -102,7 +100,7 @@ static const char *__vt_uniqueKey = "__vt_uniqueKey";
 {
     NSMutableDictionary<VTKey, VTValue> *results = [NSMutableDictionary dictionary];
     for (VTKey aKey in keys) {
-        VVExpr *condition = self.vt_uniqueKey.eq(aKey);
+        VVExpr *condition = self.uniqueKey.eq(aKey);
         VTValue value = [self findOne:condition];
         BOOL ret = [self deleteWhere:condition];
         if (ret) {
@@ -121,7 +119,7 @@ static const char *__vt_uniqueKey = "__vt_uniqueKey";
 {
     if (limit == 0) return @[];
 
-    NSString *column = self.vt_uniqueKey;
+    NSString *column = self.uniqueKey;
     NSString *condition = @"";
     if (lower) {
         if (bounds & VTBoundLower) {
@@ -159,7 +157,7 @@ static const char *__vt_uniqueKey = "__vt_uniqueKey";
 {
     if (limit == 0) return @[];
 
-    NSString *column = self.vt_uniqueKey;
+    NSString *column = self.uniqueKey;
     NSString *condition = @"";
     if (lower) {
         if (bounds & VTBoundLower) {
@@ -182,7 +180,7 @@ static const char *__vt_uniqueKey = "__vt_uniqueKey";
     NSArray *objects = [select allObjects];
     NSMutableArray<VTElement *> *results = [NSMutableArray arrayWithCapacity:objects.count];
     for (VTValue obj in objects) {
-        VTKey key = [self vt_keyForObject:obj];
+        VTKey key = [self uniqueKeyForObject:obj];
         if (key) {
             VTElement *element = [VTElement new];
             element.key = key;
@@ -205,6 +203,23 @@ static const char *__vt_uniqueKey = "__vt_uniqueKey";
     }
     NSArray<VTElement *> *results = [front arrayByAddingObjectsFromArray:after];
     return desc ? results.reverseObjectEnumerator.allObjects : results;
+}
+
+// MARK: transaction
+
+- (BOOL)begin
+{
+    return [self.vvdb begin:VVDBTransactionImmediate];
+}
+
+- (BOOL)commit
+{
+    return [self.vvdb commit];
+}
+
+- (BOOL)rollback
+{
+    return [self.vvdb rollback];
 }
 
 @end

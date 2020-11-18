@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VVAssociate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -59,6 +60,18 @@ typedef NS_OPTIONS (NSUInteger, VTBounds) {
                           upper:(NSInteger)upper
                           order:(BOOL)desc;
 
+// MARK: transaction
+
+- (BOOL)begin;
+
+- (BOOL)commit;
+
+- (BOOL)rollback;
+
+@end
+
+@interface NSObject (VVRedisable)
+@property (nonatomic, strong, readonly) VVAssociate *associate;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -1,17 +1,16 @@
 //
-//  VVOrm+Redisable.h
+//  NSMutableDictionary+Redisable.h
 //  VVStorage
 //
-//  Created by Valo on 2019/12/25.
+//  Created by Valo on 2020/11/18.
 //
 
 #import <Foundation/Foundation.h>
-#import <VVSequelize/VVSequelize.h>
 #import "VVRedisable.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VVOrm (Redisable) <VVRedisable>
+@interface NSMutableDictionary (Redisable)
 
 @end
 

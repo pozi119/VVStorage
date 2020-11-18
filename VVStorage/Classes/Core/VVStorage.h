@@ -10,11 +10,22 @@
 #endif
 #endif
 
-#import "NSMutableDictionary+Dictionariable.h"
-#import "VVDictionariable.h"
+#import "NSMutableDictionary+Redisable.h"
+#import "VVAssociate.h"
 #import "VVRedisable.h"
-#import "VVRedisableCache.h"
 #import "VVRedisStorage.h"
+
+#ifdef VVSTORAGE_SEQUELIZE
+#import "VVOrm+Redisable.h"
+#endif
+
+#ifdef VVSTORAGE_MMKV
+#import "MMKV+Redisable.h"
+#endif
+
+#ifdef VVSTORAGE_WCDB
+#import "WCTTable+Redisable.h"
+#endif
 
 FOUNDATION_EXPORT double VVStorageVersionNumber;
 FOUNDATION_EXPORT const unsigned char VVStorageVersionString[];

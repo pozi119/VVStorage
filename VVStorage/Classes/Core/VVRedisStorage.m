@@ -162,4 +162,24 @@
     return desc ? results.reverseObjectEnumerator.allObjects : results;
 }
 
+- (BOOL)begin {
+    BOOL ret =[self.cache begin];
+    if (ret) ret = [self.storage begin];
+    return ret;
+}
+
+
+- (BOOL)commit {
+    BOOL ret =[self.cache commit];
+    if (ret) ret = [self.storage commit];
+    return ret;
+}
+
+
+- (BOOL)rollback {
+    BOOL ret =[self.cache rollback];
+    if (ret) ret = [self.storage rollback];
+    return ret;
+}
+
 @end

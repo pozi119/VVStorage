@@ -39,6 +39,9 @@
     return [NSString stringWithFormat:@"id: %@, name: %@, remark: %@, avatar: %@", @(_my_id), _name, _remark, _avatar_id];
 }
 
++ (NSArray<NSString *> *)primaries{
+    return @[@"my_id"];
+}
 @end
 
 @implementation VVUserEx

@@ -11,8 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WCTTable (Redisable) <VVRedisable>
-@property (nonatomic, copy) NSString *vt_key;
-@property (nonatomic, weak) WCTDatabase *vt_wcdb;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,26 +8,19 @@
 #import "WCTTable+Redisable.h"
 #import <objc/runtime.h>
 
-static const char *__vt_key = "__vt_key";
-static const char *__vt_wcdb = "__vt_wcdb";
-
 @implementation WCTTable (Redisable)
 
 // MARK: - runtime properties
 - (NSString *)vt_key {
-    return objc_getAssociatedObject(self, __vt_key);
-}
-
-- (void)setVt_key:(NSString *)vt_key {
-    objc_setAssociatedObject(self, __vt_key, vt_key, OBJC_ASSOCIATION_COPY);
+    NSString *key = self.associate.uniqueKey;
+    NSAssert(key.length > 0, @"Please set `self.associate.uniqueKey` first!");
+    return key;
 }
 
 - (WCTDatabase *)vt_wcdb {
-    return objc_getAssociatedObject(self, __vt_wcdb);
-}
-
-- (void)setVt_wcdb:(WCTDatabase *)vt_wcdb {
-    objc_setAssociatedObject(self, __vt_wcdb, vt_wcdb, OBJC_ASSOCIATION_ASSIGN);
+    WCTDatabase *wcdb = (WCTDatabase *)self.associate.reserved;
+    NSAssert(wcdb != nil && [wcdb isKindOfClass:WCTDatabase.class], @"Please set `self.associate.reserved` with WCTDatabase");
+    return wcdb;
 }
 
 // MARK: - Redisable
@@ -170,5 +163,23 @@ static const char *__vt_wcdb = "__vt_wcdb";
     NSArray<VTElement *> *results = [front arrayByAddingObjectsFromArray:after];
     return desc ? results.reverseObjectEnumerator.allObjects : results;
 }
+
+// MARK: transaction
+
+- (BOOL)begin
+{
+    return [self.vt_wcdb beginTransaction];
+}
+
+- (BOOL)commit
+{
+    return [self.vt_wcdb commitTransaction];
+}
+
+- (BOOL)rollback
+{
+    return [self.vt_wcdb rollbackTransaction];
+}
+
 
 @end

@@ -33,20 +33,11 @@
     };
 
     self.db = [VVDatabase databaseWithPath:path];
-    VVOrmConfig *config = [VVOrmConfig configWithClass:VVUser.class];
-    config.primaries = @[@"my_id"];
-    self.orm = [VVOrm ormWithConfig:config tableName:@"user" dataBase:self.db];
-    self.orm.vtkeyComparator = comparator;
+    self.orm = [VVOrm ormWithClass:VVUser.class name:@"user" database:self.db];
 
     self.mmkv = [MMKV mmkvWithID:@"com.valo.storage.test"];
-    self.mmkv.vtkeyComparator = comparator;
-    self.mmkv.valueClass = VVUser.class;
-    self.mmkv.keyToString = ^NSString *(VTKey aKey) {
-        return [(NSNumber *)aKey stringValue];
-    };
-    self.mmkv.stringToKey = ^VTKey (NSString *string) {
-        return @([string longLongValue]);
-    };
+    self.mmkv.associate.comparator = comparator;
+    self.mmkv.associate.metaClass = VVUser.class;
     self.storage = [[VVRedisStorage alloc] initWithCache:self.mmkv storage:self.orm];
 }
 

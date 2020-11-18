@@ -27,7 +27,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/pozi119/VVStorage.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   
-  s.default_subspec = 'VVSequelize'
+  s.default_subspec = 'VVSequelize', 'MMKV'
   
   s.subspec 'Core' do |ss|
     ss.source_files = 'VVStorage/Classes/Core/**/*'
@@ -37,18 +37,20 @@ TODO: Add long description of the pod here.
     ss.source_files = 'VVStorage/Classes/VVSequelize/**/*'
     ss.dependency 'VVStorage/Core'
     ss.dependency 'VVSequelize'
-    ss.xcconfig = { 'OTHER_CFLAGS' => '-DVVSEQUELIZE_CORE' }
+    ss.xcconfig = { 'OTHER_CFLAGS' => '-DVVSEQUELIZE_CORE -DVVSTORAGE_SEQUELIZE' }
   end
   
   s.subspec 'MMKV' do |ss|
     ss.source_files = 'VVStorage/Classes/MMKV/**/*'
     ss.dependency 'VVStorage/Core'
     ss.dependency 'MMKV'
+    ss.xcconfig = { 'OTHER_CFLAGS' => '-DVVSTORAGE_MMKV' }
   end
   
   s.subspec 'WCDB' do |ss|
     ss.source_files = 'VVStorage/Classes/WCDB/**/*'
     ss.dependency 'VVStorage/Core'
     ss.dependency 'WCDB'
+    ss.xcconfig = { 'OTHER_CFLAGS' => '-DVVSTORAGE_WCDB' }
   end
 end
