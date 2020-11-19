@@ -14,8 +14,8 @@ typedef NSObject<NSCopying> * VTKey;
 typedef NSObject *            VTValue;
 
 typedef NS_OPTIONS (NSUInteger, VTBounds) {
-    VTBoundLower = 1 << 0,
-    VTBoundUpper = 1 << 1,
+	VTBoundLower = 1 << 0,
+	VTBoundUpper = 1 << 1,
 };
 
 @interface VTElement : NSObject
@@ -44,21 +44,21 @@ typedef NS_OPTIONS (NSUInteger, VTBounds) {
 
 // MARK: query
 - (NSArray<VTKey> *)keys:(nullable VTKey)lower
-                   upper:(nullable VTKey)upper
-                  bounds:(VTBounds)bounds
-                   limit:(NSUInteger)limit
-                   order:(BOOL)desc;
+        upper:(nullable VTKey)upper
+        bounds:(VTBounds)bounds
+        limit:(NSUInteger)limit
+        order:(BOOL)desc;
 
 - (NSArray<VTElement *> *)scan:(nullable VTKey)lower
-                         upper:(nullable VTKey)upper
-                        bounds:(VTBounds)bounds
-                         limit:(NSUInteger)limit
-                         order:(BOOL)desc;
+        upper:(nullable VTKey)upper
+        bounds:(VTBounds)bounds
+        limit:(NSUInteger)limit
+        order:(BOOL)desc;
 
 - (NSArray<VTElement *> *)round:(nullable VTKey)center
-                          lower:(NSInteger)lower
-                          upper:(NSInteger)upper
-                          order:(BOOL)desc;
+        lower:(NSInteger)lower
+        upper:(NSInteger)upper
+        order:(BOOL)desc;
 
 // MARK: transaction
 

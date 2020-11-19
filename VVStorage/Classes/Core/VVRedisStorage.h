@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly, nonnull) NSObject<VVRedisable> *storage;
 
 - (instancetype)initWithCache:(nonnull NSObject<VVRedisable> *)cache
-                      storage:(nonnull NSObject<VVRedisable> *)storage;
+        storage:(nonnull NSObject<VVRedisable> *)storage;
 @end
 
 @interface VVRedisStorage : NSObject <VVRedisStorable>
